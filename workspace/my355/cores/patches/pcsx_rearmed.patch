@@ -1,8 +1,8 @@
-diff --git forkSrcPrefix/Makefile.libretro forkDstPrefix/Makefile.libretro
-index 7b9618e1ccfc63982be50b82fda498d75e307fdc..f314adcbea17f05f473e1cbafc8711ab8ea0c5f1 100644
---- forkSrcPrefix/Makefile.libretro
-+++ forkDstPrefix/Makefile.libretro
-@@ -391,6 +391,25 @@ else ifeq ($(platform), rpi4_64)
+diff --git a/Makefile.libretro b/Makefile.libretro
+index 52d690f..d0ebc54 100644
+--- a/Makefile.libretro
++++ b/Makefile.libretro
+@@ -500,6 +500,25 @@ else ifeq ($(platform), rpi4_64)
          fpic := -fPIC
          CFLAGS += -march=armv8-a+crc+simd -mtune=cortex-a72 -ftree-vectorize
  
@@ -12,7 +12,7 @@ index 7b9618e1ccfc63982be50b82fda498d75e307fdc..f314adcbea17f05f473e1cbafc8711ab
 +	CC = $(CROSS_COMPILE)gcc
 +	CXX = $(CROSS_COMPILE)g++
 +	AR = $(CROSS_COMPILE)ar
-+	CFLAGS += -mcpu=cortex-a55 -mtune=cortex-a55 -march=armv8.2-a  -fomit-frame-pointer
++	CFLAGS += -mcpu=cortex-a55 -mtune=cortex-a55 -march=armv8.2-a -fomit-frame-pointer
 +	CFLAGS += -ffast-math -fdata-sections -ffunction-sections -fsingle-precision-constant -flto -fPIC
 +	LDFLAGS += -flto -fPIC
 +	ifeq (,$(DEBUG))

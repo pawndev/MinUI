@@ -1,10 +1,10 @@
-diff --git forkSrcPrefix/Makefile.libretro forkDstPrefix/Makefile.libretro
-index 831964f57dfd82c691e4a6707fbf8dea9a8989dc..32c2f38f419b7a3df5508304299d3b2ba544adf0 100644
---- forkSrcPrefix/Makefile.libretro
-+++ forkDstPrefix/Makefile.libretro
-@@ -535,6 +535,21 @@ else ifeq ($(platform), miyoo)
+diff --git a/Makefile.libretro b/Makefile.libretro
+index 52d690f..9e291b0 100644
+--- a/Makefile.libretro
++++ b/Makefile.libretro
+@@ -592,6 +592,21 @@ else ifeq ($(platform), miyoo)
+ 	BUILTIN_GPU = unai
  	DYNAREC = ari64
- 	HAVE_NEON = 0
  
 +# RGB30
 +else ifeq ($(platform), rgb30)

@@ -1,12 +1,12 @@
-diff --git forkSrcPrefix/Makefile.libretro forkDstPrefix/Makefile.libretro
-index 7b9618e1ccfc63982be50b82fda498d75e307fdc..f314adcbea17f05f473e1cbafc8711ab8ea0c5f1 100644
---- forkSrcPrefix/Makefile.libretro
-+++ forkDstPrefix/Makefile.libretro
-@@ -391,6 +391,26 @@ else ifeq ($(platform), rpi4_64)
+diff --git a/Makefile.libretro b/Makefile.libretro
+index 52d690f..a704764 100644
+--- a/Makefile.libretro
++++ b/Makefile.libretro
+@@ -500,6 +500,26 @@ else ifeq ($(platform), rpi4_64)
          fpic := -fPIC
          CFLAGS += -march=armv8-a+crc+simd -mtune=cortex-a72 -ftree-vectorize
  
-+# MIYOOMINI
++# TRIMUISMART
 +else ifeq ($(platform), trimuismart)
 +	TARGET := $(TARGET_NAME)_libretro.so
 +	CC = $(CROSS_COMPILE)gcc
