@@ -384,6 +384,11 @@ static void Game_changeDisc(char* path) {
 ///////////////////////////////////////
 
 static void SRAM_getPath(char* filename) {
+	char name[MAX_PATH];
+    strncpy(name, game.name, MAX_PATH);
+    name[MAX_PATH-1] = '\0';
+    char* dot = strrchr(name, '.');
+    if (dot) *dot = '\0';
 	sprintf(filename, "%s/%s.%s", core.saves_dir, game.name, save_format ? "srm" : "sav");
 }
 static void SRAM_read(void) {
